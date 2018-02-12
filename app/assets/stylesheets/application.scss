@@ -41,18 +41,23 @@ font-family:monospace;
 font-size:2rem;
 }
 div#front-page h1{
-  margin-left:32vw;
+  margin-left:40vw;
   margin-top:4vh;
-  font-size:3em;
+  font-size:2em;
   border-color:black;
-  width:35vw;
+  width:20vw;
   border-style:double;
 }
 p{
   padding-left:10vw;
   padding-right:10vw;
-  padding-top:39vh;
+  padding-top:10vh;
   text-align:center;
   font-family:monospace;
   color:white;
+}
+
+img#mypic{
+  margin-top:8vh;
+  border-radius:55%;
 }
