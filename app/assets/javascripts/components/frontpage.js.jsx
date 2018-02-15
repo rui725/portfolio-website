@@ -1,9 +1,10 @@
 
 
-function Logo(){
+function Logo(props){
   return(
-      <h1>Я&#124;R</h1>
-
+    <h1>
+      <img id="logo" src={props.logo_pic} />
+    </h1>
   );
 }
 
@@ -34,7 +35,7 @@ window.Frontpage = createReactClass({
                <div id="bg-page">
                </div>
                  <div id="front-page">
-                  <Logo />
+                  <Logo logo_pic={this.props.logo_pic}/>
                   <MyPic front_pic={this.props.front_pic}/>
                   <Paragraph />
                   <IndexButton />

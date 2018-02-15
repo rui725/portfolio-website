@@ -3,14 +3,16 @@
   <head>
     <title>Portfolio:rui725</title>
     <%= csrf_meta_tags %>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
 
-    <%= yield %>
-
+      <%= yield %>
+    <div style="height:20vh;">
+    <%= react_component('Footer') %>
+  </div>
   </body>
 </html>
