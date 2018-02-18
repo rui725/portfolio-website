@@ -33,7 +33,6 @@
 
 
 /*Front page styles */
-
 img#mypic{
    border: 2px solid;
   border-color:white;
@@ -87,8 +86,22 @@ div#front-page p{
 }
 
 /* Index Navbar */
+img#footer{
+  width:28px;
+}
+li.nav-item{
+      margin-left:10vw;
+}
+
+li.nav-item#right{
+      margin-left:22vw;
+}
+li.nav-item#left{
+      margin-left:15vw;
+}
+
 div#nav{
-  height:55vh !important;
+  height:65vh !important;
   padding-left:2vw;
   padding-right:2vw;
   padding-top:2vh;
@@ -102,11 +115,14 @@ div#navcarousel{
   background-size: cover;
 
 }
-
+i#mypic small{
+    margin-left:-3vw;
+}
 div#mypic{
   position:absolute;
   top:22vh;
   left:44vw;
+  z-index:1;
 }
 
 div.carousel-item{
@@ -151,9 +167,6 @@ div#bg-index{
         z-index:-1
 }
 
-.navbar{
-  
-}
 
 /* Footer styles */
 div#footer{

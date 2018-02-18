@@ -15,25 +15,43 @@ window.Navbar = createReactClass({
 
 function Nav(){
     return(
-
-    <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
-
-    <a class="navbar-brand" href="#">Home</a>
-    <a class="navbar-brand" href="#">Work</a>
-    <a class="navbar-brand" href="#">Blog</a>
-    <a class="navbar-brand" href="#">Contact</a>
-
-  </nav>
-
+    <nav class="navbar navbar-expand-md  navbar-light bg-faded main-nav">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+        <div class="collapse navbar-collapse" id="navbarNav" >
+            <ul class="nav navbar-nav">
+                <li class="nav-item active" id="left">
+                    <a class="nav-link" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Work</a>
+                </li>
+                <li class="nav-item" id="right">
+                    <a class="nav-link" href="#">Blog</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
     );
 }
 
 function MyPic2(p){
   return (
       <div id="mypic">
-          <img id="mypic" src={p.p} alt="mypic" /><br/>
-              <i>Rui Rafael Rosillas<br/>
-             </i>
+          <img id="mypic" src={p.p[0]} alt="mypic" /><br/>
+            <i id="mypic">
+              Rui Rafael Rosillas<br/> <small>
+              Vancouver, British Columbia, Canada<br/>
+              <a href="https://github.com/rui725"><img id="footer" src={p.p[3]} alt="GitHubLink" /></a>  &nbsp;
+              <a href="https://www.linkedin.com/in/ruirosillas/"><img id="footer" src={p.p[1]} alt="LinkedInLink" /></a> &nbsp;
+              <a href="mailto:ruirosillas@gmail.com?Subject=Hi%20PortfolioWebsite"><img id="footer" src={p.p[2]} alt="EmailLink" /></a> &nbsp;
+              <a href=""><img id="footer" src={p.p[4]} alt="ResumeLink" /></a>&nbsp;
+</small>
+              </i>
       </div>
   );
 }
