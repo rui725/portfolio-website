@@ -31,7 +31,14 @@
   }
 }
 
-
+a{
+  text-decoration: none;
+  color:lightgray;
+}
+a:hover{
+    text-decoration: none;
+    color:lightgray;
+}
 /*Front page styles */
 img#mypic{
    border: 2px solid;
@@ -43,7 +50,7 @@ img#mypic{
 }
 
 div#intro{
-  min-height:90vh;
+  min-height:100vh;
 }
 
 div#bg-page{
@@ -166,14 +173,50 @@ div#bg-index{
         left:0px;
         z-index:-1
 }
+/* About Body */
+div#AboutBody{
+  padding-left:2vw;
+  padding-right:2vw;
 
+}
+
+div#summary{
+   padding:2vw;
+  width:45vw;
+  font-size:2.0rem;
+  font-style:bold;
+  >p{
+    text-align:justify;
+    font-size:1.5rem;
+    font-style:italic;
+  }
+}
+
+div#plskills{
+  width:45vw;
+  background-color:rgb(211,211,211);
+}
 
 /* Footer styles */
+div#intro + div#foot{
+right: 0;
+bottom: 0;
+left: 0;
+padding: 1rem;
+text-align: center;
+}
+
+div#chart + div#foot{
+  background-color:#434242;
+  color:lightgray;
+}
+
 div#footer{
+
     margin-top:5vh;
     text-align:center;
     width: 100%;
-
+    color:lightgray;
 }
 div#footer p{
   margin-bottom:0vh;
