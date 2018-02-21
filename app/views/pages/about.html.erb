@@ -2,5 +2,8 @@
   <%= react_component('Navbar', slider_pic: [image_url('slider-mobile.png'), image_url('slider-desktop.png'), image_url('slider-web.png'), image_url('slider-test.jpg')], my_pic: [image_url('front-pic.jpg'), image_url('linkedin.png'),image_url('email.png'),image_url('github.png'),image_url('resume.png')] ) %>
 </div>
 <div id="chart">
-    <%= react_component('IndexBody') %>
+    <%= react_component('IndexBody' , skill_pic: ['https://raw.githubusercontent.com/rui725/rui-portf/master/projects/Datablues/res/drawable/t2.png','https://raw.githubusercontent.com/rui725/rui-portf/master/projects/MFeeds/pics/s2.jpg', 'https://raw.githubusercontent.com/rui725/rui-portf/Project_SimpleBot_20170730/projects/SimpleBot/aibot.PNG', image_url('dev-learn.png')] ) %>
+</div>
+<div id="abilities">
+   <%= react_component('Abilities', pl: [["Java","img",80],["Python","img",80],["C#","img",60], ["Android","img",50], ["NodeJS","img",80],[""]]) %>
 </div>

@@ -175,13 +175,17 @@ div#bg-index{
 }
 /* About Body */
 div#AboutBody{
-  padding-left:2vw;
-  padding-right:2vw;
-
+  margin-left:2vw;
+  margin-right:2vw;
+  background-color: rgb(29,29,29);
+  border-radius:25px;
 }
 
 div#summary{
-   padding:2vw;
+/*  background-color:rgba(255,255,255,0.8);*/
+  color:lightgray;
+  border-radius: 25px;
+   margin:1vw;
   width:45vw;
   font-size:2.0rem;
   font-style:bold;
@@ -192,9 +196,73 @@ div#summary{
   }
 }
 
+div#skillcarousel{
+  height:60vh;
+  >.carousel-inner{
+    width:100%;
+    height:100% !important;
+    >.carousel-item{
+      height: 100% !important;
+      >img{
+
+          max-height:-webkit-fill-available;
+          max-width:-webkit-fill-available;
+      }
+    }
+  }
+}
 div#plskills{
   width:45vw;
-  background-color:rgb(211,211,211);
+
+  border-radius:25px;
+  margin:2vw;
+  text-align: center;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+
+}
+.grid-item {
+
+  padding: 20px;
+  font-size: 30px;
+}
+
+
+/*ability section */
+div#ability{
+  background-color:#F5FFFA;
+  text-align:center;
+  margin-left:2vw;
+  margin-right:2vw;
+  height:50vh;
+  border-radius: 25px;
+}
+
+div#pl{
+  margin-left:5vw;
+  width:100%;
+
+  >div#plHead{
+    font-size:1.3rem;
+    float:left;
+    >img#pl{
+      width:25px;
+    }
+  }
+}
+
+.progress{
+  float:left;
+  margin-left:2vw;
+  margin-top:1.8vh;
+  width:20vw;
+  height:1vh;
+}
+.progress-bar{
+   width:25%;
 }
 
 /* Footer styles */
@@ -206,7 +274,7 @@ padding: 1rem;
 text-align: center;
 }
 
-div#chart + div#foot{
+div#abilities + div#foot{
   background-color:#434242;
   color:lightgray;
 }
