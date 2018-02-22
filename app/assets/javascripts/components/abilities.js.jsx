@@ -14,6 +14,8 @@ function Ability(p){
         <h2> Abilities </h2>
         <div class="grid-container">
           <div class="grid-item">
+
+
             <div class="container">
               <div id="pl">
                   <div id="plHead">

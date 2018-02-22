@@ -3,5 +3,6 @@ class PagesController < ApplicationController
   end
 
   def about
+      @programming_ls = ProgrammingL.all
   end
 end

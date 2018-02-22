@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :programming_ls
   # set the index page / root url
   root 'pages#home'
 

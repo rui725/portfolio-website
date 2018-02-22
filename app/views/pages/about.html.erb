@@ -5,5 +5,45 @@
     <%= react_component('IndexBody' , skill_pic: ['https://raw.githubusercontent.com/rui725/rui-portf/master/projects/Datablues/res/drawable/t2.png','https://raw.githubusercontent.com/rui725/rui-portf/master/projects/MFeeds/pics/s2.jpg', 'https://raw.githubusercontent.com/rui725/rui-portf/Project_SimpleBot_20170730/projects/SimpleBot/aibot.PNG', image_url('dev-learn.png')] ) %>
 </div>
 <div id="abilities">
-   <%= react_component('Abilities', pl: [["Java","img",80],["Python","img",80],["C#","img",60], ["Android","img",50], ["NodeJS","img",80],[""]]) %>
+   <div id="ability">
+     <h2> Abilities </h2>
+     <div class="grid-container">
+       <div class="grid-item">
+         <div class="container">
+           <% cnt = 0 %>
+            <% @programming_ls.each do |programming_l| %>
+               <% if cnt%2 ==0 %>
+               <div id="pl">
+                 <div id="plHead">
+                   <img id="pl" src="<%= programming_l.imgLink %>" alt='<%= programming_l.name %>' /><%= programming_l.name %>
+                 </div>
+                 <div class="progress">
+                   <div class="progress-bar bg-success" style='width:<%= programming_l.percent_iq %>%;' role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                 </div> <br/>
+                </div>
+                <% end %>
+                <% cnt += 1 %>
+              <% end %>
+          </div>
+        </div>
+             <div class="grid-item">
+               <% cnt = 0 %>
+                <% @programming_ls.each do |programming_l| %>
+                   <% if cnt%2 !=0 %>
+                   <div id="pl">
+                     <div id="plHead">
+                       <img id="pl" src="<%= programming_l.imgLink %>" alt='<%= programming_l.name %>' /><%= programming_l.name %>
+                     </div>
+                     <div class="progress">
+                       <div class="progress-bar bg-success" style='width:<%= programming_l.percent_iq %>%;' role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                     </div> <br/>
+                    </div>
+                    <% end %>
+                    <% cnt += 1 %>
+                  <% end %>
+               </div>
+             </div>
+     </div>
+   </div>
+ <%#   <%= react_component('Abilities', pl: @programming_l) %>
 </div>

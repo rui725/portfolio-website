@@ -189,6 +189,9 @@ div#summary{
   width:45vw;
   font-size:2.0rem;
   font-style:bold;
+  font-size:54px;
+  font-weight: 300;
+font-family: 'Open Sans', sans-serif !important;
   >p{
     text-align:justify;
     font-size:1.5rem;
@@ -237,10 +240,14 @@ div#ability{
   text-align:center;
   margin-left:2vw;
   margin-right:2vw;
-  height:50vh;
+  height:80vh;
   border-radius: 25px;
 }
-
+div#abilities h2{
+      font-size:54px;
+      font-weight: 300;
+  font-family: Open Sans, sans-serif !important;
+}
 div#pl{
   margin-left:5vw;
   width:100%;
@@ -255,15 +262,14 @@ div#pl{
 }
 
 .progress{
+
   float:left;
   margin-left:2vw;
   margin-top:1.8vh;
   width:20vw;
   height:1vh;
 }
-.progress-bar{
-   width:25%;
-}
+
 
 /* Footer styles */
 div#intro + div#foot{
