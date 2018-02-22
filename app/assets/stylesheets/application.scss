@@ -115,7 +115,7 @@ div#nav{
 
 }
 div#navcarousel{
-  background-color:rgb(47,79,79);/*:image-url('bg_car.jpg') no-repeat center center fixed;*/
+  background-color: #008080;/*:image-url('bg_car.jpg') no-repeat center center fixed;/*rgb(47,79,79);/*:image-url('bg_car.jpg') no-repeat center center fixed;*/
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -143,11 +143,12 @@ div.carItem{
 }
 
 p#headerText{
+
+font-family: 'Open Sans', sans-serif !important;
   color:white;
   padding-left:10vw;
   padding-top:7vh;
 font-size:2.5rem;
-font-style:bold;
  float:left;
  width:45% !important;
 }
