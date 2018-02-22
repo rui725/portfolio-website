@@ -1,0 +1,32 @@
+<%= form_for(programming_l) do |f| %>
+  <% if programming_l.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(programming_l.errors.count, "error") %> prohibited this programming_l from being saved:</h2>
+
+      <ul>
+      <% programming_l.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :imgLink %>
+    <%= f.text_field :imgLink %>
+  </div>
+
+  <div class="field">
+    <%= f.label :percent_iq %>
+    <%= f.number_field :percent_iq %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

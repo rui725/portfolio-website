@@ -115,7 +115,7 @@ div#nav{
 
 }
 div#navcarousel{
-  background-color:rgb(47,79,79);/*:image-url('bg_car.jpg') no-repeat center center fixed;*/
+  background-color: #008080;/*:image-url('bg_car.jpg') no-repeat center center fixed;/*rgb(47,79,79);/*:image-url('bg_car.jpg') no-repeat center center fixed;*/
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -143,11 +143,12 @@ div.carItem{
 }
 
 p#headerText{
+
+font-family: 'Open Sans', sans-serif !important;
   color:white;
   padding-left:10vw;
   padding-top:7vh;
 font-size:2.5rem;
-font-style:bold;
  float:left;
  width:45% !important;
 }
@@ -189,6 +190,9 @@ div#summary{
   width:45vw;
   font-size:2.0rem;
   font-style:bold;
+  font-size:54px;
+  font-weight: 300;
+font-family: 'Open Sans', sans-serif !important;
   >p{
     text-align:justify;
     font-size:1.5rem;
@@ -237,10 +241,14 @@ div#ability{
   text-align:center;
   margin-left:2vw;
   margin-right:2vw;
-  height:50vh;
+  height:80vh;
   border-radius: 25px;
 }
-
+div#abilities h2{
+      font-size:54px;
+      font-weight: 300;
+  font-family: Open Sans, sans-serif !important;
+}
 div#pl{
   margin-left:5vw;
   width:100%;
@@ -255,15 +263,14 @@ div#pl{
 }
 
 .progress{
+
   float:left;
   margin-left:2vw;
   margin-top:1.8vh;
   width:20vw;
   height:1vh;
 }
-.progress-bar{
-   width:25%;
-}
+
 
 /* Footer styles */
 div#intro + div#foot{

@@ -60,7 +60,7 @@ function Divider(p){
   return(
         <div id="carItem">
         <p id="headerText">
-          <b>{p.p[0]}</b>
+          {p.p[0]}
         </p>
         <img id="imgCar" src={p.p[1]} alt={p.p[2]}/>
         </div>
@@ -84,14 +84,7 @@ function Slider(props){
           <Divider p={['Software Quality Assurance', props.slider_pic[3], "Fourth Slide"]}/>
         </div>
       </div>
-        <a class="carousel-control-prev" href="#navcarousel" role="button" data-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#navcarousel" role="button" data-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="sr-only">Next</span>
-        </a>
+      
     </div>
     );
 }

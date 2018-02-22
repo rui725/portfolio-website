@@ -1,0 +1,2 @@
+class ProgrammingL < ApplicationRecord
+end
