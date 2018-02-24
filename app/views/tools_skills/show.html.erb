@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @tools_skill.name %>
+</p>
+
+<p>
+  <strong>Imglink:</strong>
+  <%= @tools_skill.imgLink %>
+</p>
+
+<p>
+  <strong>Percent iq:</strong>
+  <%= @tools_skill.percent_iq %>
+</p>
+
+<%= link_to 'Edit', edit_tools_skill_path(@tools_skill) %> |
+<%= link_to 'Back', tools_skills_path %>

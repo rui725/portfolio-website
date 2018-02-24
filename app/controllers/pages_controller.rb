@@ -4,5 +4,6 @@ class PagesController < ApplicationController
 
   def about
       @programming_ls = ProgrammingL.all
+      @tools_skills = ToolsSkill.all
   end
 end

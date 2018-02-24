@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Tools Skills</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Imglink</th>
+      <th>Percent iq</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @tools_skills.each do |tools_skill| %>
+      <tr>
+        <td><%= tools_skill.name %></td>
+        <td><%= tools_skill.imgLink %></td>
+        <td><%= tools_skill.percent_iq %></td>
+        <td><%= link_to 'Show', tools_skill %></td>
+        <td><%= link_to 'Edit', edit_tools_skill_path(tools_skill) %></td>
+        <td><%= link_to 'Destroy', tools_skill, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Tools Skill', new_tools_skill_path %>
