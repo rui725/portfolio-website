@@ -1,0 +1,2 @@
+class ToolsSkill < ApplicationRecord
+end

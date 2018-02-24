@@ -1,0 +1,32 @@
+<%= form_for(tools_skill) do |f| %>
+  <% if tools_skill.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(tools_skill.errors.count, "error") %> prohibited this tools_skill from being saved:</h2>
+
+      <ul>
+      <% tools_skill.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :imgLink %>
+    <%= f.text_field :imgLink %>
+  </div>
+
+  <div class="field">
+    <%= f.label :percent_iq %>
+    <%= f.number_field :percent_iq %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

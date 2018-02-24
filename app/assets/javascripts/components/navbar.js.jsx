@@ -84,7 +84,6 @@ function Slider(props){
           <Divider p={['Software Quality Assurance', props.slider_pic[3], "Fourth Slide"]}/>
         </div>
       </div>
-      
     </div>
     );
 }
