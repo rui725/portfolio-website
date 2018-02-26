@@ -11,8 +11,9 @@ window.Footer = createReactClass({
 function FootParagraph(){
     return(
         <div>
-           <p>
+
                <h2>Contact</h2>
+           <p>
                 <a href="https://www.linkedin.com/in/ruirosillas/"><img width="20px" src={'https://cdn1.iconfinder.com/data/icons/logotypes/32/square-linkedin-128.png'} alt="LinkedIn"/> Rui Rafael Rosillas</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                       <a href="mailto:ruirosillas@gmail.com?Subject=Hi%20PortfolioWebsite"><img width="20px" src={'https://cdn2.iconfinder.com/data/icons/circle-icons-1/64/mail-128.png'} alt="Mail"/> ruirosillas@gmail.com</a>
 

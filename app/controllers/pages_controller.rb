@@ -6,4 +6,8 @@ class PagesController < ApplicationController
       @programming_ls = ProgrammingL.all
       @tools_skills = ToolsSkill.all
   end
+
+  def work
+  end
+
 end
