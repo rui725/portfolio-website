@@ -9,9 +9,12 @@
   <div class="carousel-inner">
     <div class="carousel-item active">
       <div id="ability">
-        <h2> Abilities </h2>
+              <h2 id="leftSlide" onclick="leftSlide();">Tools</h2>
+      <h2> Abilities </h2>
+
         <div class="grid-container">
           <div class="grid-item">
+
             <div class="container">
               <% cnt = 0 %>
                <% @programming_ls.each do |programming_l| %>
@@ -50,9 +53,11 @@
     </div>
     <div class="carousel-item">
       <div id="ability"  style='background-color:#3498DB   !important;color:white !important;'>
+        <h2 id="rightSlide" onclick="rightSlide();" style="">Abilities</h2>
         <h2> Tools </h2>
         <div class="grid-container">
           <div class="grid-item">
+
             <div class="container">
               <% cnt = 0 %>
                <% @tools_skills.each do |programming_l| %>
@@ -86,9 +91,9 @@
                        <% cnt += 1 %>
                      <% end %>
                   </div>
-                </div>
+          </div>
         </div>
-    </div>
+      </div>
 
   </div>
 </div>

@@ -9,6 +9,16 @@ window.Navbar = createReactClass({
           <Nav />
         </div>
       );
+  },
+  componentDidMount: function() {
+    this.switchNavActive();
+  },
+  switchNavActive: function(){
+        var url = window.location.pathname;
+        console.log(url);
+        var li = $('ul.nav.navbar-nav').find('li');
+        li.removeClass('active');
+        $('li.nav-item a[href="'+url +'"]').addClass('active');
   }
 });
 
@@ -22,10 +32,10 @@ function Nav(){
         <div class="collapse navbar-collapse" id="navbarNav" >
             <ul class="nav navbar-nav">
                 <li class="nav-item active" id="left">
-                    <a class="nav-link" href="#">Home</a>
+                    <a class="nav-link" href="/about">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Work</a>
+                    <a class="nav-link" href="/work">Work</a>
                 </li>
                 <li class="nav-item" id="right">
                     <a class="nav-link" href="#">Blog</a>
