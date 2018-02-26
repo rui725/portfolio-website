@@ -14,6 +14,7 @@ window.Navbar = createReactClass({
     this.switchNavActive();
   },
   switchNavActive: function(){
+    
         var url = window.location.pathname;
         console.log(url);
         var li = $('ul.nav.navbar-nav').find('li');
