@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180222235843) do
+ActiveRecord::Schema.define(version: 20180227055613) do
 
   create_table "programming_ls", force: :cascade do |t|
     t.string   "name"
@@ -26,6 +26,17 @@ ActiveRecord::Schema.define(version: 20180222235843) do
     t.integer  "percent_iq"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "work_projects", force: :cascade do |t|
+    t.string   "title"
+    t.text     "description"
+    t.string   "imgLink"
+    t.string   "info_link"
+    t.integer  "category"
+    t.string   "technology"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
 end

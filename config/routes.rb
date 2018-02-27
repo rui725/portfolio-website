@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :work_projects
   resources :tools_skills
   resources :programming_ls
   # set the index page / root url

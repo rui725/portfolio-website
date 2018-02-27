@@ -1,0 +1,2 @@
+class WorkProject < ApplicationRecord
+end
