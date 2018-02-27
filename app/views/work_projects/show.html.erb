@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @work_project.title %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @work_project.description %>
+</p>
+
+<p>
+  <strong>Imglink:</strong>
+  <%= @work_project.imgLink %>
+</p>
+
+<p>
+  <strong>Info link:</strong>
+  <%= @work_project.info_link %>
+</p>
+
+<p>
+  <strong>Category:</strong>
+  <%= @work_project.category %>
+</p>
+
+<p>
+  <strong>Technology:</strong>
+  <%= @work_project.technology %>
+</p>
+
+<%= link_to 'Edit', edit_work_project_path(@work_project) %> |
+<%= link_to 'Back', work_projects_path %>

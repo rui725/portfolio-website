@@ -2,5 +2,5 @@
   <%= react_component('Navbar', slider_pic: [image_url('slider-mobile.png'), image_url('slider-desktop.png'), image_url('slider-web.png'), image_url('slider-test.jpg')], my_pic: [image_url('front-pic.jpg'), image_url('linkedin.png'),image_url('email.png'),image_url('github.png'),image_url('resume.png')] ) %>
 </div>
 <div id="work">
-   <%= react_component('Work'); %>
+   <%= react_component('Work', proj: @work_projects, web:@web, mobile:@mobile, desktop:@desktop ) %>
 </div>
