@@ -2,11 +2,21 @@ window.Work = createReactClass({
    render: function(){
      return(
         <div>
+        <br/>
+        <h2>Projects</h2>
          <TableWork proj={this.props.web} />
          <TableWork  proj={this.props.mobile} />
          <TableWork  proj={this.props.desktop} />
         </div>
      );
+   },
+   componentDidMount: function(){
+       this.cardFlip();
+   },
+   cardFlip :function(){
+     $('.flip').hover(function(){
+         $(this).find('.card').toggleClass('flipped');
+     });
    }
 });
 
@@ -19,12 +29,20 @@ function TableWork(proj){
    var rows = proj.proj;
    for(i =0 ;i<rows.length;i++){
     row.push(
-        <div class="card" >
-          <img class="card-img-top" src={rows[i].imgLink} alt={rows[i].title} />
-          <div class="card-body">
-          <h5 class="card-title">{rows[i].title}</h5>
-          <p class="card-text">Description: {rows[i].description}</p>
-          <a href="#" class="btn btn-primary">more info</a>
+       <div class="flip">
+          <div class="card" >
+            <div class="face front">
+               <div class="inner">
+                 <img class="card-img-top" src={rows[i].imgLink} alt={rows[i].title} />
+               </div>
+            </div>
+            <div class="face back">
+              <div class="card-body">
+                  <h5 class="card-title">{rows[i].title}</h5>
+                  <p class="card-text">Description: {rows[i].description}</p>
+                  <a href="#" class="btn btn-primary">more info</a>
+              </div>
+            </div>
           </div>
         </div>
      )
@@ -33,17 +51,17 @@ function TableWork(proj){
     var header = headers[(rows[0].category)-1];
    return(
        <table class='table'>
-       <thead class="thead-dark .center">
+       <thead class="center">
 
          <tr>
-          <th>{header}</th>
+          <th class="borderless">{header}</th>
          </tr>
 
        </thead>
         <tbody>
 
         <tr>
-          <td>
+          <td class="borderless">
           <div class="row justify-content-center">
 
             {row}
