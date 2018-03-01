@@ -293,7 +293,29 @@ div#work{
   margin-left:2vw;
   margin-right:2vw;
   height:auto;
+  background-color: rgb(29,29,29);
+  border-radius:25px;
+  > div h2{
+    font-size:54px;
+    font-weight: 300;
+     font-family: Open Sans, sans-serif !important;
+     color:white;
+     text-align: center;
+  }
 }
+th.borderless , td.borderless{
+  border:none !important;
+}
+
+th.borderless{
+  color:white;
+  font-size:30px;
+  font-weight: 300;
+font-family: Open Sans, sans-serif !important;
+  padding-left:5vw;
+}
+
+
 .row {
    display: flex;
    flex-wrap: wrap;
@@ -304,8 +326,76 @@ div#work{
 }
 div.card{
   width:25vw;
-  margin:2vw;
+  min-height:48vh;
+  max-height:48vh;
+  > div p{
+    max-height:23vh;
+    display: -webkit-box;
+ -webkit-line-clamp: 6;
+ -webkit-box-orient: vertical;
+    overflow:hidden;
+      text-overflow:ellipsis;
+  }
+  >div a{
+    position:inherit;
+    bottom:2vh;
+    left:2vh;
+  }
 }
+
+
+.flip {
+  -webkit-perspective: 800;
+          perspective: 800;
+        position: relative;
+        text-align: center;
+        margin:2vw;
+}
+.flip .card.flipped {
+  -webkit-transform: rotatey(-180deg);
+          transform: rotatey(-180deg);
+}
+.flip .card {
+    width: 270px;
+    height: 178px;
+    -webkit-transform-style: preserve-3d;
+    -webkit-transition: 0.5s;
+    transform-style: preserve-3d;
+    transition: 0.5s;
+    background-color: #fff;
+
+}
+.flip .card .face {
+  -webkit-backface-visibility: hidden ;
+    backface-visibility: hidden ;
+
+}
+.flip .card .front {
+   position: absolute;
+   width: 270px;
+   z-index: 1;
+}
+.flip .card .img {
+
+   position: relaitve;
+   width: 270px;
+   height: 178px;
+   z-index: 1;
+   border: 2px solid #000;
+}
+.flip .card .back {
+  padding-top: 10%;
+  -webkit-transform: rotatey(-180deg);
+          transform: rotatey(-180deg);
+}
+.flip .card .inner{
+  height:-webkit-fill-available;
+  overflow:hidden;
+  >img{
+     margin:-6vh;
+  }
+}
+
 /* Footer styles */
 div#intro + div#foot{
 right: 0;
