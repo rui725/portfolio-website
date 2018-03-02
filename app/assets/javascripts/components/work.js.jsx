@@ -40,7 +40,7 @@ function TableWork(proj){
               <div class="card-body">
                   <h5 class="card-title">{rows[i].title}</h5>
                   <p class="card-text">Description: {rows[i].description}</p>
-                  <a href="#" class="btn btn-primary">more info</a>
+                  <a href={'/work/' + rows[i].id} class="btn btn-primary">more info</a>
               </div>
             </div>
           </div>

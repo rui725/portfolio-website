@@ -289,7 +289,7 @@ div#pl{
 }
 
 /* WorkPage */
-div#work{
+div#work , div#workid{
   margin-left:2vw;
   margin-right:2vw;
   height:auto;
@@ -393,6 +393,18 @@ div.card{
   overflow:hidden;
   >img{
      margin:-6vh;
+  }
+}
+
+div#workid{
+  color:white;
+  padding:5vh;
+  >div p{
+    margin:2vw;
+  }
+  div h4{
+    font-weight: 300;
+  font-family: Open Sans, sans-serif !important;
   }
 }
 
