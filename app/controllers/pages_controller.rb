@@ -14,4 +14,8 @@ class PagesController < ApplicationController
      @desktop = WorkProject.where("category = 3")
   end
 
+  def workid
+    @project = WorkProject.find(params[:id])
+  end
+
 end

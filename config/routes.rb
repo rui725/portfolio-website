@@ -10,6 +10,8 @@ Rails.application.routes.draw do
 
   get '/work' => 'pages#work'
 
+  get '/work/:id' => 'pages#workid'
+
   #get 'pages/about'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
