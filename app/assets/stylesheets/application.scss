@@ -76,7 +76,7 @@ div#front-page{
   left:0;
   text-align:center;
   font-family:monospace;
-  font-size:2rem;
+  font-size:1.8rem;
 }
 div#front-page h1{
 
@@ -154,7 +154,7 @@ font-size:2.5rem;
 }
 img#imgCar{
   padding-top:2vh;
-  padding-botom:2vh;
+  padding-bottom:2vh;
   float:left;
   padding-left:10vw;
   width:40% !important;
@@ -226,8 +226,8 @@ div#skillcarousel, div#abilitySkills{
       height: 100% !important;
       >img{
 
-          max-height:-webkit-fill-available;
-          max-width:-webkit-fill-available;
+          max-height:100%;
+          max-width: 100%;
       }
     }
   }
@@ -368,7 +368,7 @@ div.card{
 .flip .card .face {
   -webkit-backface-visibility: hidden ;
     backface-visibility: hidden ;
-
+transform: rotateX(0deg);
 }
 .flip .card .front {
    position: absolute;
@@ -389,7 +389,7 @@ div.card{
           transform: rotatey(-180deg);
 }
 .flip .card .inner{
-  height:-webkit-fill-available;
+  height:48vh;
   overflow:hidden;
   >img{
      margin:-6vh;
