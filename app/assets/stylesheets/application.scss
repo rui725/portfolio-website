@@ -399,6 +399,11 @@ transform: rotateX(0deg);
 div#workid{
   color:white;
   padding:5vh;
+  text-align:center;
+  >div div#breadcrumbs{
+    left:4vw;
+    position:absolute;
+  }
   >div p{
     margin:2vw;
   }

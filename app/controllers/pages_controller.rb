@@ -18,4 +18,7 @@ class PagesController < ApplicationController
     @project = WorkProject.find(params[:id])
   end
 
+  def contact
+  end
+
 end
