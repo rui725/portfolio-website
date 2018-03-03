@@ -14,7 +14,7 @@ window.Navbar = createReactClass({
     this.switchNavActive();
   },
   switchNavActive: function(){
-    
+
         var url = window.location.pathname;
         console.log(url);
         var li = $('ul.nav.navbar-nav').find('li');
@@ -42,7 +42,7 @@ function Nav(){
                     <a class="nav-link" href="#">Blog</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Contact</a>
+                    <a class="nav-link" href="/contact">Contact</a>
                 </li>
             </ul>
         </div>
