@@ -413,6 +413,33 @@ div#workid{
   }
 }
 
+/* Contact page */
+div#contact{
+  height:90vh;
+
+}
+div#map{
+  float:right;
+  width:50%;
+  > iframe{
+    margin-top:5vh;
+    width:80%;
+    height:50vh;
+  }
+
+}
+div#msg{
+  margin-top:2vw;
+  padding-left:2vw;
+  text-align:left;
+  float:left;
+  width:50%;
+  > form h4 button#btnmsg{
+    float:right;
+    margin-right:6vw;
+  }
+}
+
 /* Footer styles */
 div#intro + div#foot{
 right: 0;
