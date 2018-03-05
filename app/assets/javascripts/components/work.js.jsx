@@ -4,20 +4,49 @@ window.Work = createReactClass({
         <div>
         <br/>
         <h2>Projects</h2>
-         <TableWork proj={this.props.web} />
-         <TableWork  proj={this.props.mobile} />
-         <TableWork  proj={this.props.desktop} />
+         <div id="web">
+            <TableWork proj={this.props.web} />
+         </div>
+         <div id="mobile">
+            <TableWork proj={this.props.mobile} />
+         </div>
+         <div id="desktop">
+            <TableWork  proj={this.props.desktop} />
+         </div>
         </div>
      );
    },
    componentDidMount: function(){
        this.cardFlip();
+       this.projectMove();
    },
    cardFlip :function(){
      $('.flip').hover(function(){
          $(this).find('.card').toggleClass('flipped');
      });
+   },
+   projectMove: function(){
+
+
+       $('ul#hmenu li a').click(function(e){
+          e.preventDefault();
+          $('ul#hmenu').css("display", "none");
+          $('ul#smenu').css("display","flex");
+
+       });
+       $('ul#smenu li a').click(function(e){
+          e.preventDefault();
+          $('ul#smenu').css("display", "none");
+          $('ul#hmenu').css("display","inline");
+          if($(this).attr("href").length != 1){
+    
+              $('html, body').animate({
+            scrollTop: $($(this).attr("href")).offset().top
+            }, 1000);
+          }
+       });
    }
+
 });
 
 function TableWork(proj){

@@ -36,7 +36,7 @@ function Nav(){
                     <a class="nav-link" href="/about">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/work">Work</a>
+                  <a class="nav-link" href="/work">Work</a>
                 </li>
                 <li class="nav-item" id="right">
                     <a class="nav-link" href="#">Blog</a>
