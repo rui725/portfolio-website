@@ -27,12 +27,13 @@ function Divide(){
 function FormEmailMessage(){
    return(
        <div id="msg">
+           <h3> Get in Touch </h3>
            <form method="POST">
-              <h4>Email: <input type="text" placeholder="Email.."/> <br /> </h4>
+              <h4>Email:&nbsp;&nbsp;<input type="text" placeholder="Email.."/> <br /> </h4>
               <h4>Name: <input type="text" placeholder="Name.."/> <br /> </h4>
-              <h4>Message</h4>
+              <br />
               <h4>
-              <textarea rows="8" cols="40" placeholder="Message..."></textarea>
+              <textarea rows="8" width="100%" placeholder="Message..."></textarea>
               </h4>
               <h4>
               <button id="btnmsg" type="button" class="btn btn-primary" onclick="">Send</button></h4>

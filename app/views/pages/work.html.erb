@@ -1,6 +1,27 @@
 <div id="nav">
   <%= react_component('Navbar', slider_pic: [image_url('slider-mobile.png'), image_url('slider-desktop.png'), image_url('slider-web.png'), image_url('slider-test.jpg')], my_pic: [image_url('front-pic.jpg'), image_url('linkedin.png'),image_url('email.png'),image_url('github.png'),image_url('resume.png')] ) %>
 </div>
+<div id="sidemenu" class="toggled">
+  <ul id="hmenu" class="nav flex">
+    <li id="hmenu" class="nav-item">
+      <a href="#" id="return" class="nav-link pl-0"><img width="40px" src="https://cdn1.iconfinder.com/data/icons/flat-and-simple-part-1/128/arrow_right-128.png" /></a>
+    </li>
+  </ul>
+  <ul id="smenu" class="nav flex">
+      <li class="nav-item">
+        <a href="#" id="return" class="nav-link pl-0"><img width="40px" src="https://cdn1.iconfinder.com/data/icons/flat-and-simple-part-1/128/arrow_left-128.png" /></a>
+      </li>
+      <li class="nav-item">
+        <a href="#web" class="nav-link pl-0"><img width="40px" src="https://cdn3.iconfinder.com/data/icons/tango-icon-library/48/internet-web-browser-128.png" /></a>
+      </li>
+      <li class="nav-item">
+        <a href="#mobile" class="nav-link pl-0"><img width="40px" src="https://cdn2.iconfinder.com/data/icons/devices-in-color/64/devices-colored-01-128.png" /></a>
+      </li>
+      <li class="nav-item">
+        <a href="#desktop" class="nav-link pl-0"><img width="40px" src="https://cdn4.iconfinder.com/data/icons/Primo_Icons/PNG/128x128/laptop.png" /></a>
+      </li>
+  </ul>
+</div>
 <div id="work">
    <%= react_component('Work', proj: @work_projects, web:@web, mobile:@mobile, desktop:@desktop ) %>
 </div>
