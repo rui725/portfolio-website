@@ -60,7 +60,7 @@ function MyPic2(p){
               <a href="https://github.com/rui725"><img id="footer" src={p.p[3]} alt="GitHubLink" /></a>  &nbsp;
               <a href="https://www.linkedin.com/in/ruirosillas/"><img id="footer" src={p.p[1]} alt="LinkedInLink" /></a> &nbsp;
               <a href="mailto:ruirosillas@gmail.com?Subject=Hi%20PortfolioWebsite"><img id="footer" src={p.p[2]} alt="EmailLink" /></a> &nbsp;
-              <a href=""><img id="footer" src={p.p[4]} alt="ResumeLink" /></a>&nbsp;
+              <a href="https://www.visualcv.com/rui-rafael-rosillas"><img id="footer" src={p.p[4]} alt="ResumeLink" /></a>&nbsp;
 </small>
               </i>
       </div>
