@@ -1,3 +1,22 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
+
+
+  def send_message
+    name = params["name"]
+    email = params["email"]
+    msg = params["msg"]
+    if !params["name"].empty? && !params["email"].empty? && !params["msg"].empty? then
+      email_reg = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+      result = email =~ email_reg
+      if result
+        #send email work on mailer create login for admin accnt
+        render json:{state:"Success", message: "Message sent"}
+      else
+         render json:{state:"Error", message:"Wrong Email Address" + result.to_s, data:"data"}
+      end
+    else
+      render json:{state:"Error", message:"Missing values for either Name, Email, and Message", data:"data"}
+    end
+  end
 end
