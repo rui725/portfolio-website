@@ -51,11 +51,27 @@ Rails.application.configure do
 
   # Do not fallback to assets pipeline if a precompiled asset is missed.
   config.assets.compile = true
-  
+
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
 
   # Use an evented file watcher to asynchronously detect changes in source code,
   # routes, locales, etc. This feature depends on the listen gem.
   # config.file_watcher = ActiveSupport::EventedFileUpdateChecker
+
+  #SMTP CONFIG
+
+  # ActionMailer Config
+  config.action_mailer.delivery_method = :smtp
+
+  config.action_mailer.smtp_settings = {
+    :address              =>  'smtp.gmail.com',
+    :port                 =>  587,
+    :user_name            => ENV['MAILER_EMAIL'],
+    :password             => ENV['MAILER_PASSWORD'],
+    :authentication       => 'plain',
+    :enable_starttls_auto => true
+
+  }
+
 end

@@ -10,7 +10,7 @@ class ApplicationController < ActionController::Base
       email_reg = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
       result = email =~ email_reg
       if result
-        #send email work on mailer create login for admin accnt
+        GMailer.send_m(email,name,msg).deliver!
         render json:{state:"Success", message: "Message sent"}
       else
          render json:{state:"Error", message:"Wrong Email Address" + result.to_s, data:"data"}
