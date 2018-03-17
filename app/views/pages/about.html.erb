@@ -1,4 +1,114 @@
-<div id="nav">
+<section id="body">
+  <section id="top">
+    <%= react_component('Top', logo_pic: image_url('logo3.png'),  slider_pic: [image_url('slider-mobile.png'), image_url('slider-desktop.png'), image_url('slider-web.png'), image_url('slider-test.jpg')] ) %>
+  </section>
+  <section id="profile">
+    <%= react_component('IndexBody', user_pic: image_url('profile-grey') ) %>
+  </section>
+  <section id="skills">
+    <div id="abilities">
+      <div id="abilitySkills" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div id="ability">
+                    <h2 id="leftSlide" onclick="leftSlide();">Tools</h2>
+            <h2> Abilities </h2>
+
+              <div class="grid-container">
+                <div class="grid-item">
+
+                  <div class="container">
+                    <% cnt = 0 %>
+                     <% @programming_ls.each do |programming_l| %>
+                        <% if cnt%2 ==0 %>
+                        <div id="pl">
+                          <div id="plHead">
+                            <img id="pl" src="<%= programming_l.imgLink %>" alt='<%= programming_l.name %>' /><%= programming_l.name %>
+                          </div>
+                          <div class="progress">
+                            <div class="progress-bar bg-success" style='width:<%= programming_l.percent_iq %>%;' role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                          </div> <br/>
+                         </div>
+                         <% end %>
+                         <% cnt += 1 %>
+                       <% end %>
+                   </div>
+                 </div>
+                      <div class="grid-item">
+                        <% cnt = 0 %>
+                         <% @programming_ls.each do |programming_l| %>
+                            <% if cnt%2 !=0 %>
+                            <div id="pl">
+                              <div id="plHead">
+                                <img id="pl" src="<%= programming_l.imgLink %>" alt='<%= programming_l.name %>' /><%= programming_l.name %>
+                              </div>
+                              <div class="progress">
+                                <div class="progress-bar bg-success" style='width:<%= programming_l.percent_iq %>%;' role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                              </div> <br/>
+                             </div>
+                             <% end %>
+                             <% cnt += 1 %>
+                           <% end %>
+                        </div>
+                      </div>
+              </div>
+          </div>
+          <div class="carousel-item">
+            <div id="ability"  style='background-color:#3498DB   !important; height:100% !important; color:white !important;'>
+              <h2 id="rightSlide" onclick="rightSlide();" style="">Abilities</h2>
+              <h2> Tools </h2>
+              <div class="grid-container">
+                <div class="grid-item">
+
+                  <div class="container">
+                    <% cnt = 0 %>
+                     <% @tools_skills.each do |programming_l| %>
+                        <% if cnt%2 ==0 %>
+                        <div id="pl">
+                          <div id="plHead">
+                            <img id="pl" src="<%= programming_l.imgLink %>" alt='<%= programming_l.name %>' /><%= programming_l.name %>
+                          </div>
+                          <div class="progress">
+                            <div class="progress-bar bg-success" style='width:<%= programming_l.percent_iq %>%;' role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                          </div> <br/>
+                         </div>
+                         <% end %>
+                         <% cnt += 1 %>
+                       <% end %>
+                   </div>
+                 </div>
+                      <div class="grid-item">
+                        <% cnt = 0 %>
+                         <% @tools_skills.each do |programming_l| %>
+                            <% if cnt%2 !=0 %>
+                            <div id="pl">
+                              <div id="plHead">
+                                <img id="pl" src="<%= programming_l.imgLink %>" alt='<%= programming_l.name %>' /><%= programming_l.name %>
+                              </div>
+                              <div class="progress">
+                                <div class="progress-bar bg-success" style='width:<%= programming_l.percent_iq %>%;' role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                              </div> <br/>
+                             </div>
+                             <% end %>
+                             <% cnt += 1 %>
+                           <% end %>
+                        </div>
+                </div>
+              </div>
+            </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="portfolio">
+    <%= react_component('Work', proj: {:web => @web, :mobile => @mobile, :desktop => @desktop}, allproj: @work_projects ) %>
+  </section>
+  <section id="contact">
+        <%= react_component('Contact', logo: image_url('logo3.png'))  %>
+  </section>
+</section>
+<!-- <div id="nav">
   <%= react_component('Navbar', slider_pic: [image_url('slider-mobile.png'), image_url('slider-desktop.png'), image_url('slider-web.png'), image_url('slider-test.jpg')], my_pic: [image_url('front-pic.jpg'), image_url('linkedin.png'),image_url('email.png'),image_url('github.png'),image_url('resume.png')] ) %>
 </div>
 <div id="chart">
@@ -101,3 +211,4 @@
    </div>
  <%#   <%= react_component('Abilities', pl: @programming_l) %>
 </div>
+-->

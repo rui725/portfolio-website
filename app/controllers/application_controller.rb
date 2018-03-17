@@ -19,4 +19,7 @@ class ApplicationController < ActionController::Base
       render json:{state:"Error", message:"Missing values for either Name, Email, and Message", data:"data"}
     end
   end
+
+
+  
 end
