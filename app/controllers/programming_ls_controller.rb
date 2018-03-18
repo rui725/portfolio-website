@@ -1,6 +1,6 @@
 class ProgrammingLsController < ApplicationController
-  before_action :set_programming_l, only: [:show, :edit, :update, :destroy]
-
+  before_action  :authenticate_admin!, :set_programming_l, only: [:show, :edit, :update, :destroy]
+    protect_from_forgery prepend: true
   # GET /programming_ls
   # GET /programming_ls.json
   def index

@@ -1,6 +1,13 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
+  def after_sign_in_path_for(resource)
+    :authenticated_root
+  end
+
+  def after_sign_out_path_for(resource)
+    '/login'
+  end
 
   def send_message
     name = params["name"]
@@ -21,5 +28,5 @@ class ApplicationController < ActionController::Base
   end
 
 
-  
+
 end
