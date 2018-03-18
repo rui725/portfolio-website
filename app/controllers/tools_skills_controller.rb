@@ -1,5 +1,7 @@
 class ToolsSkillsController < ApplicationController
-  before_action :set_tools_skill, only: [:show, :edit, :update, :destroy]
+
+  before_action  :authenticate_admin!, :set_tools_skill, only: [:show, :edit, :update, :destroy]
+  protect_from_forgery prepend: true
 
   # GET /tools_skills
   # GET /tools_skills.json

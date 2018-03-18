@@ -1,5 +1,7 @@
 class WorkProjectsController < ApplicationController
-  before_action :set_work_project, only: [:show, :edit, :update, :destroy]
+
+  before_action :authenticate_admin!, :set_work_project,   only: [:show, :edit, :update, :destroy]
+  protect_from_forgery prepend: true
 
   # GET /work_projects
   # GET /work_projects.json

@@ -1,0 +1,33 @@
+<script>
+  function signout(){
+    var target = "/admins/sign_out"
+   form_string = "<form method=\"Delete\" action=\"" + target + "\" accept-charset=\"UTF-8\"><input name=\"_method\" type=\"hidden\" value=\"DELETE\"></form>"
+
+   form = $(form_string)
+    form.appendTo('body');
+    form.submit();
+  }
+</script>
+
+<img id="logoadmin" width="200px"src='<%= image_url("logo3.png") %>' />
+<div id="adminpanel">
+  <h2> Administrator Panel </h2>
+  <div id="Modify" class="container ">
+
+
+          <h2>SKILLS</h2>
+       <button  class="btn btn-primary" id="adminMode" onclick='location.href="/programming_ls"'>Programming Languages</button><br />
+      <button class="btn btn-primary"  id="adminMode" onclick='location.href="/tools_skills"'>Tools</button>
+
+
+
+          <h2>PROJECTS</h2>
+      <button class="btn btn-primary"  id="adminMode" onclick='location.href="/work_projects"' >Projects</button>
+
+  </div>
+
+  <button type="button" id="signout" class="btn btn-primary" >
+  <%= link_to "Log out", destroy_admin_session_path, method: :delete %>
+    <!--  <%= link_to 'Sign out', '/admins/sign_out', method: :delete, data: { confirm: 'Are you sure?' } %> -->
+  </button>
+</div>
