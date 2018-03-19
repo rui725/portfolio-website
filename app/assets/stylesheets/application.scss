@@ -23,7 +23,6 @@ body { padding-top: 20vh;
   div#intro{
     min-height:40vh;
   }
-
   div#front-page p{
     padding-left:10vw;
     padding-right:10vw;
@@ -33,6 +32,82 @@ body { padding-top: 20vh;
     color:white;
     font-size:1rem;
   }
+
+  p#headerText{
+    font-size:1.8rem !important;
+  }
+  img#imgCar{
+    margin-top:5vh !important;
+    width:94% !important;
+  }
+  div#ability{
+    >h2{
+      font-size:32px !important;
+
+    }
+    >div div.grid-item{
+      padding-left:0 !important;
+      >div div#plHead{
+        font-size:0.8rem !important;
+      }
+    }
+  }
+  img#pl{
+     display:none !important;
+   }
+   button#btnproj{
+     display:inline !important;
+     float:right;
+     margin-top:2vh;
+   }
+   div#projlist{
+    position:absolute !important;
+     z-index:0;
+     width:50vw !important;
+   }
+   div#projdesc{
+     width:100% !important;
+     >h2{
+       font-size:3rem !important;
+     }
+     position:absolute !important;
+   }
+   input#btnmsg{
+     margin-left:21% !important;
+
+   }
+   div#msg form + img{
+     margin-left:10% !important;
+   }
+   div#break{
+     display:inline !important;
+   }
+   section#profile{
+
+     font-size:1.5rem !important;
+     overflow-y:scroll;
+   }
+   div#personal, div#connectme{
+     /*position:relative !important;
+     font-size: 0.5rem !important;
+     text-align:center !important;
+     float:none !important;*/
+     display:none;
+   }
+   div#plskills{
+     width:100% !important;
+     position:relative !important;
+   }
+   div#summary p{
+     margin-top:0 !important;
+   }
+   div#profcontact{
+     display:inline !important;
+   }
+   div#about{
+     overflow-y:scroll;
+     height:108vh !important;
+   }
 }
 
 section#top{
@@ -71,6 +146,15 @@ nav#navtop{
 
 }
 
+div#profcontact{
+  display:none;
+}
+button#btnproj{
+  display:none;
+}
+div#break{
+  display:none;
+}
 // Carousel fade transition
 .carousel-fade {
 	.carousel-item {
@@ -235,7 +319,7 @@ img#imgCar{
   float:left;
   bottom:0;
   padding-left:5vw;
-  width:45% !important;
+  width:51%;
 }
 /*
 div#bg-index{
@@ -275,6 +359,9 @@ div#personal, div#connectme{
     font-size:1.5rem;
     padding-bottom:0;
     margin-bottom:0;
+  }
+  >a{
+    color:black !important;
   }
     font-style:italic;
   font-size:1rem;
@@ -426,11 +513,11 @@ div#projlist{
     font-weight: 300;
     font-weight:bold;
   }
-  >div#mheader{
-    padding-top:3vh;
-    padding-bottom:3vh;
-    background-color:#2980B9;
-  }
+}
+div#mheader{
+  padding-top:3vh;
+  padding-bottom:3vh;
+  background-color:#2980B9;
 }
 h5#tech, p#desc h5, p#info_link h5{
   font-family: "Roboto Slab","ff-tisa-web-pro","Georgia",Arial,sans-serif !important;

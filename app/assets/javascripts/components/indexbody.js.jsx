@@ -9,6 +9,7 @@ window.IndexBody = createReactClass({
             <Skills pic={this.props.user_pic} />
             <ConnectMe />
           </div>
+          <Contacts p={this.props.my_pic} />
               <br /><br />
           <Summ />
           </div>
@@ -19,6 +20,20 @@ window.IndexBody = createReactClass({
 function GridLayout(){
   return(
     <div></div>
+  );
+}
+
+function Contacts(p){
+  return(
+    <div id="profcontact">
+    Rui Rafael Rosillas<br/> <small>
+      Vancouver, British Columbia, Canada<br/>
+      <a  href="https://github.com/rui725"><img id="footer" src={p.p[3]} width="40px" alt="GitHubLink" /></a>  &nbsp;
+      <a  href="https://www.linkedin.com/in/ruirosillas/"><img id="footer" width="40px" src={p.p[1]} alt="LinkedInLink" /></a> &nbsp;
+      <a  href="mailto:ruirosillas@gmail.com?Subject=Hi%20PortfolioWebsite"><img id="footer" width="40px" src={p.p[2]} alt="EmailLink" /></a> &nbsp;
+      <a  href="https://www.visualcv.com/rui-rafael-rosillas"><img id="footer" width="40px" src={p.p[4]} alt="ResumeLink" /></a>&nbsp;
+    </small>
+    </div>
   );
 }
 
@@ -56,13 +71,13 @@ function ConnectMe(){
   return(
     <div id="connectme">
       <p>Email</p>
-      ruirosillas@gmail.com
+      <a href="mailto:ruirosillas@gmail.com?Subject=Hi%20PortfolioWebsite">ruirosillas@gmail.com</a>
       <p>LinkedIn</p>
-      https://linkedin.com/in/rui725
+      <a href="https://linkedin.com/in/ruirosillas">https://linkedin.com/in/ruirosillas</a>
       <p>GitHub</p>
-      https://github.com/rui725
-      <p>Website</p>
-      https://ruirosillas.herokuapp.com
+      <a href="https://github.com/rui725">https://github.com/rui725</a>
+      <p>Resume</p>
+      <a href="https://www.visualcv.com/rui-rafael-rosillas">https://www.visualcv.com/rui-rafael-rosillas</a>
     </div>
   );
 }
