@@ -91,9 +91,20 @@ window.Work = createReactClass({
         $("div[id^='i']").fadeOut(1);
 
         $("div"+$(this).attr("href")).fadeIn("slow");
-
+        $('div#projlist').css("z-index", "0");
       });
 
+      $('button#btnproj').click(function(e){
+          e.preventDefault();
+           var view = $('div#projlist').css("z-index");
+
+           if(view == "0"){
+               $('div#projlist').css("z-index", "1");
+           }else{
+               $('div#projlist').css("z-index", "0");
+           }
+
+      });
 
    }
 
@@ -161,10 +172,11 @@ function RightProject(ap){
     }
     row.push(
       <div id={"i"+ all_proj[items].id } >
+           <button id="btnproj"type="button" class="btn btn-outline-primary">Projects</button>
           <h2>{all_proj[items].title}</h2>
           <hr/>
           <div class="row">
-            <div class="col-6">
+            <div class="col-lg-6">
               <div class="col-12">
               <h5 id="tech">Technology: </h5>{all_proj[items].technology}
               <p id="desc"><h5>Description:</h5>{all_proj[items].description}</p>
@@ -172,7 +184,7 @@ function RightProject(ap){
               </div>
 
             </div>
-            <div class="col-67">
+            <div class="col-6">
               <img id="proj" src={all_proj[items].imgLink} />
             </div>
           </div>
