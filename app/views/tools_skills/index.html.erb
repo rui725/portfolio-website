@@ -1,26 +1,26 @@
 <p id="notice"><%= notice %></p>
-
+<div class="admin_page">
 <h1>Tools Skills</h1>
-
-<table>
-  <thead>
+<button class="btn btn-primary" id="back" onclick="window.location.href='/admin';"> Back to Menu</button>
+<table class="table table-hover table-striped">
+  <thead class="thead-dark">
     <tr>
       <th>Name</th>
       <th>Imglink</th>
       <th>Percent iq</th>
-      <th colspan="3"></th>
+      <th colspan="3">Action</th>
     </tr>
   </thead>
 
   <tbody>
     <% @tools_skills.each do |tools_skill| %>
-      <tr>
+      <tr class="table-light">
         <td><%= tools_skill.name %></td>
         <td><%= tools_skill.imgLink %></td>
         <td><%= tools_skill.percent_iq %></td>
-        <td><%= link_to 'Show', tools_skill %></td>
-        <td><%= link_to 'Edit', edit_tools_skill_path(tools_skill) %></td>
-        <td><%= link_to 'Destroy', tools_skill, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to "<button class=\"btn btn-primary\">Show</button>".html_safe, tools_skill %></td>
+        <td><%= link_to "<button class=\"btn btn-primary\">Edit</button>".html_safe, edit_tools_skill_path(tools_skill) %></td>
+        <td><%= link_to "<button class=\"btn btn-primary\">Destroy</button>".html_safe, tools_skill, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -28,4 +28,7 @@
 
 <br>
 
-<%= link_to 'New Tools Skill', new_tools_skill_path %>
+<%= link_to "<button class=\"btn btn-primary\">Add New Tools/Skills</button>".html_safe, new_tools_skill_path %>
+<br/>
+<br/>
+</div>
