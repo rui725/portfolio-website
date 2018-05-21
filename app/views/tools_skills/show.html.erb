@@ -1,4 +1,11 @@
 <p id="notice"><%= notice %></p>
+<div class="admin_page">
+
+  <h1>Tools/Skills: <%= @tools_skill.name %> </h1>
+  <p>
+    <strong>ID:</strong>
+    <%= @tools_skill.id %>
+  </p>
 
 <p>
   <strong>Name:</strong>
@@ -15,5 +22,6 @@
   <%= @tools_skill.percent_iq %>
 </p>
 
-<%= link_to 'Edit', edit_tools_skill_path(@tools_skill) %> |
-<%= link_to 'Back', tools_skills_path %>
+<%= link_to "<button class=\"btn btn-primary\">Edit</button>".html_safe, edit_tools_skill_path(@tools_skill) %> |
+<%= link_to "<button class=\"btn btn-primary\">Back</button>".html_safe, tools_skills_path %>
+</div>

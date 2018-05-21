@@ -1,5 +1,10 @@
 <p id="notice"><%= notice %></p>
-
+<div class="admin_page">
+  <h1>Programmin Language: <%= @programming_l.name %> </h1>
+  <p>
+    <strong>ID:</strong>
+    <%= @programming_l.id %>
+  </p>
 <p>
   <strong>Name:</strong>
   <%= @programming_l.name %>
@@ -15,5 +20,6 @@
   <%= @programming_l.percent_iq %>
 </p>
 
-<%= link_to 'Edit', edit_programming_l_path(@programming_l) %> |
-<%= link_to 'Back', programming_ls_path %>
+<%= link_to "<button class=\"btn btn-primary\">Edit</button>".html_safe, edit_programming_l_path(@programming_l) %> |
+<%= link_to "<button class=\"btn btn-primary\">Back</button>".html_safe, programming_ls_path %>
+<div class="admin_page">

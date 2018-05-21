@@ -1,26 +1,26 @@
 <p id="notice"><%= notice %></p>
-
-<h1>Programming Ls</h1>
-
-<table>
-  <thead>
+<div class="admin_page">
+<h1>Programming Languages</h1>
+<button class="btn btn-primary" id="back" onclick="window.location.href='/admin';"> Back to Menu</button>
+<table class="table table-hover table-striped">
+  <thead class="thead-dark">
     <tr>
       <th>Name</th>
       <th>Imglink</th>
       <th>Percent iq</th>
-      <th colspan="3"></th>
+      <th colspan="3">Action</th>
     </tr>
   </thead>
 
   <tbody>
     <% @programming_ls.each do |programming_l| %>
-      <tr>
+      <tr class="table-light">
         <td><%= programming_l.name %></td>
-        <td><%= programming_l.imgLink %></td>
+        <td id="cut"><%= programming_l.imgLink %></td>
         <td><%= programming_l.percent_iq %></td>
-        <td><%= link_to 'Show', programming_l %></td>
-        <td><%= link_to 'Edit', edit_programming_l_path(programming_l) %></td>
-        <td><%= link_to 'Destroy', programming_l, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to "<button class=\"btn btn-primary\">Show</button>".html_safe, programming_l %></td>
+        <td><%= link_to "<button class=\"btn btn-primary\">Edit</button>".html_safe, edit_programming_l_path(programming_l) %></td>
+        <td><%= link_to "<button class=\"btn btn-primary\">Destroy</button>".html_safe, programming_l, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -28,4 +28,7 @@
 
 <br>
 
-<%= link_to 'New Programming L', new_programming_l_path %>
+<%= link_to "<button class=\"btn btn-primary\">Add New Programming Language</button>".html_safe, new_programming_l_path %>
+<br/>
+<br/>
+</div>

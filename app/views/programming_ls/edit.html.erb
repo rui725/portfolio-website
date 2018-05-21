@@ -1,6 +1,8 @@
-<h1>Editing Programming L</h1>
+<div class="admin_page">
+<h1>Edit Programming Language: <%= @programming_l.name %></h1>
 
 <%= render 'form', programming_l: @programming_l %>
 
-<%= link_to 'Show', @programming_l %> |
-<%= link_to 'Back', programming_ls_path %>
+<%= link_to "<button class=\"btn btn-primary\">Show</button>".html_safe, @programming_l %> |
+<%= link_to "<button class=\"btn btn-primary\">Back</button>".html_safe, programming_ls_path %>
+</div>

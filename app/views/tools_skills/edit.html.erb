@@ -1,6 +1,8 @@
-<h1>Editing Tools Skill</h1>
+<div class="admin_page">
+<h1>Edit Tools/Skill: <%= @tools_skill.name %></h1>
 
 <%= render 'form', tools_skill: @tools_skill %>
 
-<%= link_to 'Show', @tools_skill %> |
-<%= link_to 'Back', tools_skills_path %>
+<%= link_to "<button class=\"btn btn-primary\">Show</button>".html_safe, @tools_skill %> |
+<%= link_to "<button class=\"btn btn-primary\">Back</button>".html_safe, tools_skills_path %>
+</div>
