@@ -1,3 +1,3 @@
 # portfolio-website
-Rui Rafael Rosillas portfolio website
+Rui R portfolio website
 Made Using RoR React
